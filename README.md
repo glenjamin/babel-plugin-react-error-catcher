@@ -35,7 +35,7 @@ npm install babel-plugin-react-error-catcher
 
 There's not much to it, really.  All you do is provide the plugin to Babel with the path to a reporter module.  Use whatever reporter you want, or try out one of the three included:
 
-1. [Function that log errors to console](https://github.com/loggur/babel-plugin-react-error-catcher/blob/master/reporters/console.js)
+1. [Function that logs errors to console](https://github.com/loggur/babel-plugin-react-error-catcher/blob/master/reporters/console.js)
 
 2. [Component that displays the error string with white text on a red background](https://github.com/loggur/babel-plugin-react-error-catcher/blob/master/reporters/basic-reporter.js)
 

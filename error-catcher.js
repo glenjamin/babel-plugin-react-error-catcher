@@ -75,7 +75,7 @@ function errorCatcher (React, filename, displayName, reporter) {
 
           if (nextRender) {
             setTimeout(function () {
-              if (global.document) {
+              if (typeof global !== 'undefined' && global.document) {
                 this.forceUpdate();
               };
             }.bind(this));
