@@ -1,6 +1,6 @@
 {
   "name": "babel-plugin-react-error-catcher",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Automatically adds a decorator to React components. Accepts a single argument, a path to some module for error reporting, and if there's an error, it will catch it and pass it to the reporter.",
   "main": "index.js",
   "scripts": {
