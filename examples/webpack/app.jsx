@@ -52,7 +52,3 @@ export const style = {
 export function mount (element) {
   React.render(<App/>, element);
 }
-
-if (module.hot) {
-  module.hot.accept();
-}
