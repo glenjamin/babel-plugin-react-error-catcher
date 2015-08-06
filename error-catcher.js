@@ -53,6 +53,12 @@ function errorCatcher (React, filename, displayName, reporter) {
     var keys = Object.getOwnPropertyNames(proto);
     var nextRender = null;
 
+    if (displayName === null) {
+      displayName = Component.displayName || null;
+    } else if (Component.displayName === undefined) {
+      Component.displayName = displayName;
+    }
+
     if (Component._patchedToCatch) {
       return Component;
     }
@@ -60,6 +66,7 @@ function errorCatcher (React, filename, displayName, reporter) {
 
     keys.forEach(function (key) {
       var method = proto[key];
+      var isReactClassApproved = method && method.isReactClassApproved;
 
       if (typeof method !== 'function') {
         return;
@@ -105,6 +112,10 @@ function errorCatcher (React, filename, displayName, reporter) {
         };
       } else {
         proto[key] = getResult;
+      }
+
+      if (isReactClassApproved) {
+        proto[key].isReactClassApproved = isReactClassApproved;
       }
     });
     

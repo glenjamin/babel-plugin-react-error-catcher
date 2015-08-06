@@ -90,7 +90,7 @@ function createErrorCatcher (reporterPath) {
             [
               React,
               t.literal(file.opts._address || file.opts.filename),
-              t.literal(node.id && node.id.name || ''),
+              t.literal(parent && parent.id && parent.id.name || null),
               reporter
             ]
           ),
