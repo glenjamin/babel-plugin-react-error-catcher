@@ -3,6 +3,7 @@
 var React = require('react');
 
 var BasicReporter = React.createClass({
+  displayName: "CaughtError",
   getStyle: function () {
     var propsStyle = this.props.style || {};
     var style = {
